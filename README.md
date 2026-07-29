@@ -4,7 +4,7 @@ A Streamlit dashboard analyzing ~5,000 customer support tickets to find where
 SLA performance is breaking down and which agents/categories need attention.
 
 ## Live URL
-
+https://customerticketdashboard-9calij8y7zuqimdfb6tnge.streamlit.app/
 
 ## Setup (local)
 
