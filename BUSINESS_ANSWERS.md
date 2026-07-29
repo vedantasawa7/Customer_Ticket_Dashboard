@@ -112,20 +112,20 @@ a Pearson correlation between per-customer ticket volume and average CSAT.
 
 - **15 duplicate `ticket_id` rows** (exact duplicates). Dropped, keeping the
   first occurrence.
-- **1,040 missing `resolved_date`** - mostly explained by the 512 tickets
-  still `Open` (correct, not yet resolved), but ~528 rows on
+- **1,038 missing `resolved_date`** - mostly explained by the 511 tickets
+  still `Open` (correct, not yet resolved), but ~527 rows on
   Resolved/Closed/Reopened tickets are missing a resolved date, which is a
   genuine data entry gap. Left as null and excluded from date based
   calculations rather than guessing a value.
-- **1,023 missing `csat_score`** - fully explained by ticket status: it's
-  missing exactly on the 512 `Open` and 511 `Reopened` tickets, which
+- **1,021 missing `csat_score`** - fully explained by ticket status: it's
+  missing exactly on the 511 `Open` and 510 `Reopened` tickets, which
   haven't been surveyed yet. Not an error, just expected missingness.
 - **88 rows with negative or zero `resolution_time_hours`** - e.g. a ticket
   created and resolved the same day showing -18.2 hours. Almost certainly a
   timestamp/timezone calculation error upstream. Excluded these from all
   resolution time statistics (Q2) rather than including or clipping them,
   since the sign is unreliable, not just the magnitude.
-- **73 missing `created_date`.** Left null; excluded from any date-based
+- **72 missing `created_date`.** Left null; excluded from any date-based
   trend analysis.
 
 **No** negative/invalid values were found in `first_response_time_hours`,

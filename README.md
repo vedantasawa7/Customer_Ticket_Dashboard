@@ -18,8 +18,8 @@ Open the URL Streamlit prints (usually `http://localhost:8501`).
 ## Approach
 
 1. Loaded `customer_tickets.csv` (5,015 rows) and did an initial data quality
-   pass: found 15 duplicate `ticket_id` rows, 73 missing `created_date`
-   values, 1,040 missing `resolved_date` values, 1,023 missing `csat_score`
+   pass: found 15 duplicate `ticket_id` rows, 72 missing `created_date`
+   values, 1,038 missing `resolved_date` values, 1,021 missing `csat_score`
    values, and 88 rows with negative/zero `resolution_time_hours`.
    Duplicates were dropped; missing dates/CSAT were mostly explained by
    ticket status (Open/Reopened tickets haven't been resolved or surveyed
